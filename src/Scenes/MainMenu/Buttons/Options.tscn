@@ -1,0 +1,10 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://src/Scenes/MainMenu/Buttons/Options.png" type="Texture" id=1]
+
+[node name="Options" type="TextureButton"]
+margin_left = 204.0
+margin_top = 876.0
+margin_right = 914.0
+margin_bottom = 1064.0
+texture_normal = ExtResource( 1 )

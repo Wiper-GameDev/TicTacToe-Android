@@ -1,0 +1,35 @@
+[gd_scene load_steps=7 format=2]
+
+[ext_resource path="res://src/Scenes/Game/Game.gd" type="Script" id=1]
+[ext_resource path="res://src/Scenes/Game/Background/Background.tscn" type="PackedScene" id=2]
+[ext_resource path="res://src/Scenes/Game/Grid/Grid.tscn" type="PackedScene" id=3]
+[ext_resource path="res://src/Scenes/Game/Scores/Scores.tscn" type="PackedScene" id=4]
+[ext_resource path="res://src/Scenes/Game/Buttons/Restart/Restart.tscn" type="PackedScene" id=5]
+[ext_resource path="res://src/Scenes/Game/Buttons/MainMenu/MainMenu.tscn" type="PackedScene" id=6]
+
+[node name="Game" type="Node2D"]
+script = ExtResource( 1 )
+
+[node name="Background" parent="." instance=ExtResource( 2 )]
+position = Vector2( 540, 960 )
+
+[node name="Grid" parent="." instance=ExtResource( 3 )]
+position = Vector2( 539, 958 )
+
+[node name="Scores" parent="." instance=ExtResource( 4 )]
+
+[node name="Moves" type="Node2D" parent="."]
+
+[node name="Buttons" type="Node2D" parent="."]
+
+[node name="MainMenu" parent="Buttons" instance=ExtResource( 6 )]
+margin_left = 690.0
+margin_top = 1544.0
+margin_right = 930.0
+margin_bottom = 1784.0
+
+[node name="Restart" parent="Buttons" instance=ExtResource( 5 )]
+margin_left = 149.0
+margin_top = 1544.0
+margin_right = 389.0
+margin_bottom = 1784.0

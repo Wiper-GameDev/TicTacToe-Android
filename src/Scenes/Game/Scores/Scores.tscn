@@ -1,0 +1,19 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://src/Scenes/Game/Scores/Score.tscn" type="PackedScene" id=1]
+[ext_resource path="res://src/Scenes/Game/Scores/ScoreO.png" type="Texture" id=2]
+[ext_resource path="res://src/Scenes/Game/Scores/Scores.gd" type="Script" id=3]
+
+[node name="Scores" type="Node2D"]
+script = ExtResource( 3 )
+
+[node name="Cross" parent="." instance=ExtResource( 1 )]
+position = Vector2( 150, 125 )
+
+[node name="Nought" parent="." instance=ExtResource( 1 )]
+position = Vector2( 690, 125 )
+
+[node name="Texture" parent="Nought" index="0"]
+texture = ExtResource( 2 )
+
+[editable path="Nought"]
